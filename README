@@ -20,7 +20,7 @@ Example spreadsheet usage as found here: http://github.com/jacobat/ruby-spreadsh
 -- in the view "index.xls.rxls
 
 sheet = workbook.create_worksheet
-sheet.name = "What's in a name?"
+sheet.name = "What's in a name"
 
 sheet.row(0).concat %w{Name Country Acknowlegement}
 sheet[1,0] = 'Japan'
