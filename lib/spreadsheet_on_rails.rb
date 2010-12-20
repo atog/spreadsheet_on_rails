@@ -5,7 +5,7 @@ module SpreadsheetOnRails
 
     def compile(template)
       %Q{controller.response.content_type ||= Mime::XLS
-         controller.headers["Content-Disposition"] = "attachment"
+         controller.headers["Content-Disposition"] = "attachment;filename=" + (controller.respond_to?(:xls_filename) ? controller.send(:xls_filename) : "")
          SpreadsheetOnRails::Base.new { |workbook| #{template.source} }.process}
     end
 

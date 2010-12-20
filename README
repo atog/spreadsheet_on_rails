@@ -46,6 +46,10 @@ bold = Spreadsheet::Format.new :weight => :bold
 
 -- in the controller
 
+def xls_filename
+  "your-filename.xls"
+end
+
 def index
   @lines = Line.find(:all)
 
