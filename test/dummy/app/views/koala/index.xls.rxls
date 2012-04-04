@@ -1,0 +1,4 @@
+sheet = workbook.create_worksheet
+sheet.name = "Koalas"
+sheet.row(0).push "This is a row"
+sheet.row(1).push "This is a second row"

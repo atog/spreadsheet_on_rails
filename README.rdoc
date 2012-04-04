@@ -1,0 +1,45 @@
+- SpreadsheetOnRails
+
+A gem to generate xls documents by using rxls templates.
+
+Based on Defv's railsxls plugin (http://github.com/DefV/railsxls) without the Java part.
+
+== Installation
+
+In <b>Rails 3</b>, add this to your Gemfile and run the +bundle+ command.
+
+  gem "spreadsheet_on_rails"
+
+== Getting Started
+
+Add support for the new format in your controller:
+
+  class HomeController < ApplicationController
+
+    def index
+      respond_to do |format|
+        format.html
+        format.xls { render :xls => "<filename>"}
+      end
+    end
+  end
+
+Create an xls view +app/views/home/index.rxls+:
+
+  sheet = workbook.create_worksheet
+  sheet.name = "What's in a name"
+
+  sheet.row(0).concat %w{Name Country Acknowlegement}
+  sheet[1,0] = 'Japan'
+  row = sheet.row(1)
+  row.push 'Creator of Ruby'
+  row.unshift 'Yukihiro Matsumoto'
+  sheet.row(2).replace [ 'Daniel J. Berger', 'U.S.A.',
+                          'Author of original code for Spreadsheet::Excel' ]
+  sheet.row(3).push 'Charles Lowe', 'Author of the ruby-ole Library'
+  sheet.row(3).insert 1, 'Unknown'
+  sheet.update_row 4, 'Hannes Wyss', 'Switzerland', 'Author'
+
+The view basically allow you to write directly with the +spreadsheet+ gem.
+
+Copyright (c) 2012 10to1, released under the MIT license
