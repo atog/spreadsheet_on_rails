@@ -42,4 +42,6 @@ Create an xls view +app/views/home/index.rxls+:
 
 The view basically allow you to write directly with the +spreadsheet+ gem.
 
+{<img src="https://secure.travis-ci.org/10to1/spreadsheet_on_rails.png?branch=master" alt="Build Status" />}[http://travis-ci.org/10to1/spreadsheet_on_rails]
+
 Copyright (c) 2012 10to1, released under the MIT license
