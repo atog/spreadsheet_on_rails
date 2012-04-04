@@ -1,8 +1,8 @@
-- SpreadsheetOnRails
+= SpreadsheetOnRails
 
 A gem to generate xls documents by using rxls templates.
 
-Based on Defv's railsxls plugin (http://github.com/DefV/railsxls) without the Java part.
+Based on {Defv}[http://github.com/DefV]'s {railsxls plugin}[http://github.com/DefV/railsxls] without the Java part.
 
 == Installation
 
