@@ -4,7 +4,5 @@ source "http://rubygems.org"
 
 gem "jquery-rails"
 gem "activemodel", "~> 6.1.0"
-gem 'sprockets', '~> 3.7.2'
-gem 'pry-byebug'
 
 gemspec path: "../"
