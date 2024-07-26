@@ -11,7 +11,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
     end
 
     should "set correct filename" do
-      assert_equal 'attachment; filename="koalatastic.xls"', headers['Content-Disposition']
+      assert_equal 'attachment; filename=koalatastic.xls', headers['Content-Disposition']
     end
 
     should "set correct content type" do
@@ -29,7 +29,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
     end
 
     should "set correct filename" do
-      assert_equal 'attachment; filename="contents.xls"', headers['Content-Disposition']
+      assert_equal 'attachment; filename=contents.xls', headers['Content-Disposition']
     end
 
     should "set correct content type" do

@@ -15,8 +15,8 @@ class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
 
-  # Stop ActiveRecord from wrapping tests in transactions
-  self.use_transactional_fixtures = false
+  # # Stop ActiveRecord from wrapping tests in transactions
+  # self.use_transactional_fixtures = false
 
   teardown do
     Capybara.reset_sessions!    # Forget the (simulated) browser state
